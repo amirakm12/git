@@ -1,0 +1,73 @@
+{
+  "ai_model": {
+    "model_name": "gpt-4",
+    "max_tokens": 4096,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "timeout": 30
+  },
+  "rag": {
+    "vector_db_path": "data/vector_db",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "similarity_threshold": 0.7,
+    "max_retrieved_docs": 5
+  },
+  "speculative_decoding": {
+    "draft_model": "gpt-3.5-turbo",
+    "target_model": "gpt-4",
+    "speculation_length": 5,
+    "acceptance_threshold": 0.8,
+    "max_speculation_depth": 3
+  },
+  "kernel": {
+    "driver_path": "drivers/",
+    "enable_monitoring": true,
+    "monitoring_interval": 1000,
+    "log_level": "INFO",
+    "security_enabled": true
+  },
+  "sensors": {
+    "enabled_sensors": ["cpu", "memory", "disk", "network", "gpu"],
+    "fusion_algorithm": "kalman_filter",
+    "sampling_rate": 100,
+    "buffer_size": 1000,
+    "calibration_enabled": true
+  },
+  "agents": {
+    "max_concurrent_tasks": 10,
+    "task_timeout": 300,
+    "retry_attempts": 3,
+    "communication_protocol": "async_queue"
+  },
+  "ui": {
+    "dashboard_port": 8080,
+    "dashboard_host": "0.0.0.0",
+    "voice_enabled": true,
+    "voice_language": "en-US",
+    "theme": "dark"
+  },
+  "security": {
+    "encryption_enabled": true,
+    "key_rotation_interval": 86400,
+    "audit_logging": true,
+    "access_control_enabled": true,
+    "max_login_attempts": 3,
+    "session_timeout": 3600
+  },
+  "monitoring": {
+    "metrics_enabled": true,
+    "metrics_port": 9090,
+    "log_retention_days": 30,
+    "alert_thresholds": {
+      "cpu_usage": 80.0,
+      "memory_usage": 85.0,
+      "disk_usage": 90.0,
+      "response_time": 5.0
+    },
+    "performance_monitoring": true
+  }
+}

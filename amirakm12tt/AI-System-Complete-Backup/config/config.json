@@ -1,0 +1,85 @@
+{
+  "ai_models": {
+    "model_name": "gpt-4",
+    "max_tokens": 4096,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "timeout": 30
+  },
+  "rag": {
+    "vector_db_path": "data/vector_db",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "similarity_threshold": 0.7,
+    "max_retrieved_docs": 5
+  },
+  "speculative_decoding": {
+    "draft_model": "gpt-3.5-turbo",
+    "target_model": "gpt-4",
+    "speculation_length": 5,
+    "acceptance_threshold": 0.8,
+    "max_speculation_depth": 3
+  },
+  "kernel": {
+    "driver_path": "drivers/",
+    "enable_monitoring": true,
+    "monitoring_interval": 60,
+    "enable_security": true,
+    "log_level": "INFO"
+  },
+  "sensors": {
+    "fusion_algorithm": "kalman_filter",
+    "sampling_rate": 1.0,
+    "calibration_enabled": true,
+    "anomaly_detection": true,
+    "sensor_timeout": 30
+  },
+  "agents": {
+    "max_concurrent_tasks": 10,
+    "task_timeout": 300,
+    "enable_learning": true,
+    "classification_threshold": 0.8,
+    "research_depth": 3
+  },
+  "ui": {
+    "dashboard_host": "0.0.0.0",
+    "dashboard_port": 8080,
+    "enable_voice": true,
+    "voice_language": "en-US",
+    "wake_word": "hey system",
+    "voice_timeout": 10
+  },
+  "security": {
+    "enable_encryption": true,
+    "key_rotation_interval": 86400,
+    "audit_logging": true,
+    "access_control": true,
+    "threat_detection": true
+  },
+  "monitoring": {
+    "enable_system_monitor": true,
+    "enable_security_monitor": true,
+    "metrics_retention_days": 30,
+    "alert_thresholds": {
+      "cpu_usage": 80,
+      "memory_usage": 85,
+      "disk_usage": 90
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/system.log",
+    "max_size": "100MB",
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "data": {
+    "base_dir": "data",
+    "backup_enabled": true,
+    "backup_interval": 3600,
+    "compression": true
+  }
+}

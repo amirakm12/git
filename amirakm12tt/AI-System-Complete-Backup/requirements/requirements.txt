@@ -1,0 +1,187 @@
+# AI System Requirements
+# Core dependencies for the comprehensive AI system
+
+# Python Core Extensions
+setuptools>=65.0.0
+wheel>=0.38.0
+pip>=22.0.0
+
+# Async and Event Loop
+asyncio-mqtt==0.16.1
+uvloop==0.19.0
+
+# Web Framework and HTTP
+aiohttp==3.9.1
+aiohttp-cors==0.7.0
+aiofiles==23.2.0
+jinja2==3.1.2
+websockets==12.0
+
+# AI and Machine Learning Core
+torch==2.1.2
+torchvision==0.16.2
+torchaudio==2.1.2
+transformers==4.36.2
+sentence-transformers==2.2.2
+openai==1.6.1
+huggingface-hub==0.19.4
+
+# LangChain Ecosystem
+langchain==0.0.352
+langchain-community==0.0.5
+langchain-core==0.1.3
+langchain-experimental==0.0.47
+
+# Vector Database and Embeddings
+chromadb==0.4.18
+numpy==1.24.4
+scipy==1.11.4
+faiss-cpu==1.7.4
+pinecone-client==2.2.4
+
+# Machine Learning Additional
+scikit-learn==1.3.2
+xgboost==2.0.2
+lightgbm==4.1.0
+
+# System Monitoring and Process Management
+psutil==5.9.6
+GPUtil==1.4.0
+nvidia-ml-py3==7.352.0
+
+# Data Processing and Storage
+pandas==2.1.4
+polars==0.20.2
+pyarrow==14.0.2
+h5py==3.10.0
+tables==3.9.2
+
+# Security and Cryptography
+cryptography==41.0.8
+bcrypt==4.1.2
+passlib==1.7.4
+pyjwt==2.8.0
+
+# Voice Interface
+SpeechRecognition==3.10.0
+pyttsx3==2.90
+pyaudio==0.2.11
+librosa==0.10.1
+soundfile==0.12.1
+
+# Networking and Communication  
+requests==2.31.0
+httpx==0.25.2
+aioredis==2.0.1
+celery==5.3.4
+
+# Configuration and Environment
+python-dotenv==1.0.0
+pydantic==2.5.2
+pydantic-settings==2.1.0
+dynaconf==3.2.4
+
+# Database Connectivity
+sqlalchemy==2.0.23
+alembic==1.13.1
+asyncpg==0.29.0
+motor==3.3.2
+
+# Logging and Monitoring
+structlog==23.2.0
+loguru==0.7.2
+prometheus-client==0.19.0
+grafana-api==1.0.3
+
+# Caching and Session Management
+redis==5.0.1
+memcached==1.59
+diskcache==5.6.3
+
+# Testing and Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+pytest-xdist==3.5.0
+pytest-benchmark==4.0.0
+factory-boy==3.3.0
+faker==20.1.0
+
+# Documentation
+sphinx==7.2.6
+sphinx-rtd-theme==2.0.0
+sphinx-autodoc-typehints==1.25.2
+myst-parser==2.0.0
+
+# Code Quality and Formatting
+black==23.12.0
+isort==5.13.2
+flake8==6.1.0
+mypy==1.8.0
+pylint==3.0.3
+bandit==1.7.5
+safety==2.3.5
+
+# Performance Profiling and Monitoring
+py-spy==0.3.14
+memory-profiler==0.61.0
+line-profiler==4.1.1
+pyinstrument==4.6.0
+
+# Serialization and Data Formats
+msgpack==1.0.7
+orjson==3.9.10
+ujson==5.8.0
+toml==0.10.2
+pyyaml==6.0.1
+
+# Time and Date Utilities
+python-dateutil==2.8.2
+arrow==1.3.0
+pendulum==2.1.2
+
+# File System and I/O Utilities
+watchdog==3.0.0
+pathspec==0.12.1
+gitpython==3.1.40
+
+# Image and Media Processing
+pillow==10.1.0
+opencv-python==4.8.1.78
+
+# Quantum-inspired Computing
+qiskit==0.45.1
+cirq==1.3.0
+
+# Additional Utilities
+click==8.1.7
+typer==0.9.0
+rich==13.7.0
+tqdm==4.66.1
+colorama==0.4.6
+tabulate==0.9.0
+
+# Development and Debugging
+ipython==8.18.1
+jupyter==1.0.0
+notebook==7.0.6
+jupyterlab==4.0.9
+ipdb==0.13.13
+
+# API and Service Integration
+fastapi==0.104.1
+uvicorn==0.24.0
+starlette==0.27.0
+
+# Optional GPU Support (CUDA 11.8)
+# Uncomment if you have CUDA-capable GPU
+# torch==2.1.2+cu118 --index-url https://download.pytorch.org/whl/cu118
+# torchvision==0.16.2+cu118 --index-url https://download.pytorch.org/whl/cu118
+# torchaudio==2.1.2+cu118 --index-url https://download.pytorch.org/whl/cu118
+
+# Optional GPU Support (CUDA 12.1)
+# Uncomment if you have newer CUDA-capable GPU
+# torch==2.1.2+cu121 --index-url https://download.pytorch.org/whl/cu121
+# torchvision==0.16.2+cu121 --index-url https://download.pytorch.org/whl/cu121
+# torchaudio==2.1.2+cu121 --index-url https://download.pytorch.org/whl/cu121

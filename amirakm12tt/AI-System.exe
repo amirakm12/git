@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+"""
+AI System - Advanced Multi-Agent AI Platform
+Windows Executable Version
+"""
+
+import sys
+import os
+import subprocess
+from pathlib import Path
+
+def main():
+    """Main entry point for the AI System executable"""
+    
+    print("🎯 AI System - Advanced Multi-Agent AI Platform")
+    print("================================================")
+    print("🚀 Starting AI System...")
+    print("")
+    
+    try:
+        # Get the directory where this executable is located
+        exe_dir = Path(__file__).parent if hasattr(sys, '_MEIPASS') else Path.cwd()
+        
+        # Look for the main.py file
+        main_script = exe_dir / "src" / "main.py"
+        
+        if main_script.exists():
+            print(f"✅ Found main script: {main_script}")
+            print("🔧 Launching AI System...")
+            print("=" * 50)
+            
+            # Run the main script
+            result = subprocess.run([sys.executable, str(main_script)], 
+                                  cwd=exe_dir, 
+                                  capture_output=False)
+            
+            if result.returncode != 0:
+                print(f"⚠️ AI System exited with code: {result.returncode}")
+        else:
+            print("❌ Could not find src/main.py")
+            print("📁 Current directory:", exe_dir)
+            print("📁 Available files:")
+            for item in exe_dir.iterdir():
+                print(f"  • {item.name}")
+            
+            # Try to find the main script in subdirectories
+            for main_file in exe_dir.rglob("main.py"):
+                print(f"🔍 Found main.py at: {main_file}")
+                print("🚀 Attempting to run...")
+                
+                result = subprocess.run([sys.executable, str(main_file)], 
+                                      cwd=main_file.parent, 
+                                      capture_output=False)
+                break
+            else:
+                print("❌ No main.py found in any subdirectory")
+                
+    except Exception as e:
+        print(f"❌ Error starting AI System: {e}")
+        print("")
+        print("🔧 Troubleshooting:")
+        print("  1. Make sure Python is installed")
+        print("  2. Check that all dependencies are installed")
+        print("  3. Verify the AI System files are present")
+        print("")
+    
+    print("")
+    print("Press Enter to exit...")
+    input()
+
+if __name__ == "__main__":
+    main()
